@@ -2111,16 +2111,8 @@
                                     alt="donotpay logo"
                                     src="fonts/platrio.svg"
                                 />
-                                <div class="main-module--nav--JSElV">
-                                    <a target="_blank" href="https://donotpay.com/learn/burner-phones/" class="main-module--extraLink--B0O2l">Burner Phones</a>
-                                    <a target="_blank" href="https://donotpay.com/learn/claim-a-warranty/" class="main-module--extraLink--B0O2l">Warranty</a>
-                                    <a target="_blank" href="https://donotpay.com/learn/free-trials/" class="main-module--extraLink--B0O2l">Free Trials</a>
-                                    <a target="_blank" href="https://donotpay.com/learn/how-to-cancel/" class="main-module--extraLink--B0O2l">How To Cancel</a>
-                                    <a target="_blank" href="https://donotpay.com/learn/chargebacks-and-refunds/" class="main-module--extraLink--B0O2l">Refunds</a>
-                                    <a target="_blank" href="https://donotpay.com/learn/appeal-banned-account/" class="main-module--extraLink--B0O2l">Unban Account</a>
-                                </div>
                             </div>
-                            <div class="main-module--downloadButton--jOtKk"><a id="about" href="https://donotpay.com/about/">About</a><button id="web">Sign Up</button></div>
+                            <div class="main-module--downloadButton--jOtKk"><a id="about" href="https://donotpay.com/about/">About</a><button id="web">Consulta</button></div>
                             <div class="main-module--nav--JSElV">
                                 <a id="learningCenter" target="_blank" href="https://donotpay.com/learn/">Learn</a><a id="topFeatures" target="_blank" href="https://donotpay.com/learn/most-popular-features/">Top Features</a>
                                 <a id="topFeatures" target="_blank" href="https://donotpay.com/learn/most-recent-resources/">Latest</a><a id="business" href="https://donotpay.com/business/">Business</a>
@@ -2134,28 +2126,65 @@
                             <div class="main-module--container--YtIZ1">
                                 <h1 class="templates__H1-sc-1ncu0n1-2 HIZBw">Inteligencia Artificial para Visas.</h1>
                                 <p class="main-module--description--uz3hx">Platrio es tu asistente de Inteligencia Artificial para Consultas de visas profesionales en EE.UU</p>
-                                <div class="main-module--inputContainer--AMP-P">
+                                <!-- <div class="main-module--inputContainer--AMP-P">
                                     <form method="GET" action class="login-module--form--KWh43">
                                         <div class="login-module--inputContainer--dXdpT">
                                             <div class="login-module--inputContentStyled--EoDnp"><input value placeholder="Numero de Whatsapp" class="login-module--input--XzK2Q" /></div>
                                             <a href="https://api.whatsapp.com/send/?phone=17544657575&text&type=phone_number&app_absent=0" target="_blank" class="login-module--loginButton--Xf4so">Consulta Gratis</a>
-                                            <!-- <button class="login-module--loginButton--Xf4so">Consulta Gratis</button> -->
+                                        </div>
+                                    </form>
+                                </div> --> 
+                                <div class="main-module--inputContainer--AMP-P">
+                                    <form id="whatsapp-form" method="POST" action="https://formspree.io/f/maygwpgk" class="login-module--form--KWh43">
+                                        <div class="login-module--inputContainer--dXdpT">
+                                            <div class="login-module--inputContentStyled--EoDnp">
+                                                <input name="whatsappNum" type="text" value="" placeholder="Numero de Whatsapp" class="login-module--input--XzK2Q" required/>
+                                            </div>
+                                            <button type="submit" class="login-module--loginButton--Xf4so">Consulta Gratis</button>
                                         </div>
                                     </form>
                                 </div>
+                                
+                                <script>
+                                document.getElementById('whatsapp-form').addEventListener('submit', function(event) {
+                                    event.preventDefault(); // prevent the form from submitting normally
+                                
+                                    var xhr = new XMLHttpRequest();
+                                    var form = event.target; // the form that was submitted
+                                    var formData = new FormData(form);
+                                
+                                    xhr.open("POST", "https://formspree.io/f/maygwpgk", false); // Cambiar a false para hacerlo sincrónico
+                                    xhr.setRequestHeader("Accept", "application/json");
+                                
+                                    xhr.onreadystatechange = function() {
+                                        if (xhr.readyState !== XMLHttpRequest.DONE) return;
+                                        if (xhr.status !== 200) {
+                                            console.error("Error al enviar el formulario");
+                                        }
+                                    };
+                                
+                                    xhr.send(formData);
+                                    window.location.href = "https://api.whatsapp.com/send/?phone=17544657575&text&type=phone_number&app_absent=0";
+                                });
+                                </script>
+                                
+                                
+                                
+
                                 <!-- <div class="main-module--disclaimerText--fcYeM">
                                     By signing up or signing in, you are agreeing to <a href="https://donotpay.com/learn/terms-of-service-and-privacy-policy/">DoNotPay's Terms and Conditions</a> and for us to send messages to the phone
                                     number or email provided. These terms contain an arbitration agreement; please read them carefully. DoNotPay is not a law firm and is not licensed to practice law. DoNotPay provides a platform for legal
                                     information and self-help.
                                 </div> -->
                                 <div style="width: 335px; height: 260px;" class="main-module--list--Js-Kn">
-                                    <h2 class="main-module--heading--EtnFT">Things you can do with DoNotPay</h2>
+                                    <h2 class="main-module--heading--EtnFT">PREGUNTAS QUE PUEDES HACER</h2>
                                     <ul>
-                                        <li>Fight Corporations</li>
-                                        <li>Beat Bureaucracy</li>
-                                        <li>Find Hidden Money</li>
-                                        <li>Cancel Subscriptions</li>
-                                        <li>Automatically Cancel Your Free Trials</li>
+                                        <li>Visa apropiada (habilidades)</li>
+                                        <li>Visa familiar</li>
+                                        <li>Tiempo de visa</li>
+                                        <li>Requisitos visa</li>
+                                        <li>Visas para profesionales</li>
+                                        <li>Diferentes visas de profesionales</li>
                                     </ul>
                                 </div>
                             </div>
@@ -2165,462 +2194,15 @@
                             </svg>
                         </div>
                         <div class="main-module--dividerSecond--yZ93h"></div>
-                        <section class="CategoriesList__Section-sc-1t9lbvy-1 CoIxh">
-                            <h2 class="CategoriesList__H2-sc-1t9lbvy-0 ehYrOy">Features</h2>
-                            <ul class="CategoriesList__List-sc-1t9lbvy-2 kJFZnh">
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/file-an-83b-election/">83(b) Election</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/airline-flight-compensation/">Airline Flight Compensation Hacks</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/analyze-tos/">Analyze TOS</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/animal-control/">Animal Control</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/appeal-banned-account/">Appeal Banned Account</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/parking-tickets/">Appeal Parking Tickets in Any City</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/toll-booth-tickets/">Appeal Toll Booth Tickets</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/birth-certificates/">Birth Certificates</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/breach-of-contract/">Breach of Contract</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/break-my-lease/">Break My Lease</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/burner-card-for-reservations/">Burner Card For Reservations</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/burner-phones/">Burner Phones</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/how-to-cancel/">Cancel Any Service or Subscription</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/cancel-anything/">Cancel Anything</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/cancel-timeshares/">Cancel Timeshares</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/car-lease-negotiation/">Car Lease Negotiation</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/car-registration-renewal/">Car Registration Renewal</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/car-repossession-issues/">Car Repossession Issues</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/casino-taxes/">Casino Taxes</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/change-mailing-address/">Change Mailing Address</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/chargebacks-and-refunds/">Chargebacks and Refunds</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/child-travel-consent/">Child Travel Consent Form</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/city-repairs/">City Repairs</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/claim-my-rebates/">Claim My Rebates</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/clean-credit-report/">Clean Credit Report</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/clinical-trials/">Clinical Trials</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/close-bank-accounts/">Close Bank Accounts</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/college-fee-waiver/">College Fee Waivers</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/compensation-for-victims-of-crime/">Compensation for Victims of Crime</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/concert-ticket-scams/">Concert Ticket Scams</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/connect-with-an-inmate/">Connect With an Inmate</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/embassies-and-consulates/">Contact Embassies and Consulates</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/contact-government-representatives/">Contact Government Representatives</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/convert-points-and-miles/">Convert Points and Miles</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/copyright-protection/">Copyright Protection</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/create-passport-photos/">Create Passport Photos</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/credit-cards/">Credit Cards</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/defamation-demand-letters/">Defamation Demand Letters</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/delaware-code-220-request/">Delaware Code 220 Request</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/delete-accounts/">Delete Accounts</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/discover-and-apply-for-scholarships/">Discover and Apply for Scholarships</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/dispute-seatbelt-tickets/">Dispute Seatbelt Tickets</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/dispute-traffic-tickets/">Dispute Traffic Tickets</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/do-not-mail/">Do Not Mail</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/donate-plasma-for-cash/">Donate Plasma For Cash</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/egg-donor-rights/">Egg Donor Rights</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/emotional-support-animals/">Emotional Support Animal</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/fight-and-waive-fees/">Fight and Waive Fees</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/fight-bank-fees/">Fight Bank Fees</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/small-claims-court/">Fight Corporations</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/spam-collector/">Fight Email Spam</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/fight-medical-fraud/">Fight Medical Fraud</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/text-spam/">Fight Text Spam</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/fight-workplace-discrimination/">Fight Workplace Discrimination</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/file-a-complaint/">File a Complaint Against Any Company</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/file-police-report/">File Police Report</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/file-sec-complaints/">File SEC Complaints</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/financial-aid-appeal-letters/">Financial Aid Appeal Letters</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/find-discounts/">Find Discounts</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/airport-lost-and-found/">Find Lost Airport Items</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/find-lost-items/">Find Lost Items</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/lost-and-found-pets/">Find My Lost Pet</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/find-the-best-schools/">Find the Best Schools</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/missing-money/">Find Unclaimed Money</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/fishing-licenses/">Fishing Licenses</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/free-dental-care/">Free Dental Care</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/free-fast-food/">Free Fast Food</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/free-raffle-tickets/">Free Raffle Tickets</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/freedom-of-information-act/">Freedom of Information Act</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/frozen-crypto-funds/">Frozen Crypto Funds</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/fuel-rewards-program/">Fuel Rewards</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/gambling-protection/">Gambling Protection</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/get-cash-back/">Get Cash Back</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/free-trials/">Get Free Trials & Don't Get Charged</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/gift-card-cash-back/">Gift Card Cash Back</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/government-tests-prep/">Government Tests</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/help-with-bills/">Help With Bills</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/help-with-rent/">Help With Rent</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/hoa-fines-and-complaints/">HOA Fines and Complaints</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/hotel-complaints-and-refunds/">Hotel Complaints and Refunds</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/hotel-upgrades/">Hotel Upgrades</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/hr-complaints/">HR Complaints</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/hunting-licenses/">Hunting Licenses</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/identity-theft/">Identity Theft</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/increase-credit-limit/">Increase Credit Limit</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/inflation-pay-request/">Inflation Pay Request</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/insurance-claims/">Insurance Claims</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/item-return-requests/">Item Return Request</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/customer-service/">Jump the Phone Queue for Any Company</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/landlord-protection/">Landlord Protection</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/late-delivery-refunds/">Late Delivery Refunds</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/lounge-access/">Lounge Access</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/lower-your-payday-loans/">Lower Your Payday Loans</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/mailing-service/">Mailing as a Service</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/make-money-online/">Make Money Online</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/marriage-certificates/">Marriage Certificates</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/military-protection/">Military Protection</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/negotiate-hotel-bill/">Negotiate Hotel Bill</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/negotiate-my-salary/">Negotiate My Salary</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/neighbor-complaints/">Neighbor Complaints</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/notarize-any-document/">Notarize Documents</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/homeschool-letter-of-intent/">Notice of Intent To Homeschool</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/online-fax/">Online Fax</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/parental-leave-requests/">Parental Leave Requests & Benefits</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/pay-bills-online/">Pay Bills Online</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/pet-licenses/">Pet Licenses</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/photo-ninja/">Photo Ninja</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/fight-price-gouging/">Price Gouging</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/price-match/">Price Match</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/print-quality-photos-from-home/">Print Quality Photos From Home</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/quote-my-repair/">Quote My Repair</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/recalls/">Recalls</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/recover-account-passwords/">Recover Account Passwords</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/recover-hacked-accounts/">Recover Hacked Accounts</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/redeem-damaged-money/">Redeem Damaged Money</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/reducing-property-taxes/">Reducing Property Taxes</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/remove-background-image/">Remove Background Image</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/remove-my-lien/">Remove My Lien</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/remove-negative-reviews/">Remove Negative Reviews & Photos</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/rental-car-upgrades/">Rental Car Upgrades</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/report-animal-abuse/">Report Animal Abuse</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/report-moving-issues/">Report Moving Issues</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/report-tax-fraud/">Report Tax Fraud</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/request-jury-duty-exemption/">Request Jury Duty Exemption</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/request-jury-duty-leave/">Request Jury Duty Leave</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/request-medical-records/">Request Medical Records</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/request-sick-leave/">Request Sick Leave</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/request-testing-accommodations/">Request Testing Accommodations</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/robocall-compensation/">Robocall Compensation</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/dmv-appointments/">Schedule Appointments With the DMV</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/apply-section-8/">Section 8</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/sex-offender-search/">Sex Offender Search</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/small-business-loan-request-letter/">Small Business Loan Request Letter</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/stalking-and-harassment/">Stalking and Harassment</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/stop-debt-collectors/">Stop Debt Collectors</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/take-down-personal-information/">Take Down Personal Information</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/trademark-registration/">Trademark Registration</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/utility-outages/">Utility Outages</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/voter-registration/">Voter Registration</a></div>
-                                </div>
-                                <div class="CategoriesList__Item-sc-1t9lbvy-3 hRivps">
-                                    <div class="CategoriesList__ItemContent-sc-1t9lbvy-4 eKeuBf"><a href="https://donotpay.com/learn/claim-a-warranty/">Warranty Claims</a></div>
-                                </div>
-                            </ul>
-                        </section>
-                        <div class="main-module--inRenderContainer--lwF0K">
-                            <div style="background-color: #f24ac4;" class="main-module--sectionContainer--1upY3">
-                                <div class="main-module--content--Yvq1Y">
-                                    <h2 class="main-module--heading--EtnFT">Most Recent Articles</h2>
-                                    <div class="main-module--buttonContainer--BFTER"><a href="https://donotpay.com/learn/most-recent-resources/" class="main-module--recentButton--keSH2"> See All </a></div>
-                                </div>
-                                <picture>
-                                    <source type="image/webp" srcset="data:image/webp;base64, 4E8ACe5G9bIAAAEVYSUZEAAAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAA%2BKADAAQAAAABAAAA%2BAAAAAA%3D.html" />
-                                    <source type="image/png" srcset="images/MostRecentCta-c56817f6cae11f06afed6f3ad8163351.png" />
-                                    <img alt="most recent image" loading="lazy" />
-                                </picture>
-                            </div>
-                            <div class="main-module--sectionContainer--1upY3">
-                                <div class="main-module--content--Yvq1Y">
-                                    <h2 class="main-module--heading--EtnFT">Most Popular Features</h2>
-                                    <div class="main-module--buttonContainer--BFTER"><a href="https://donotpay.com/learn/most-popular-features/"> See All </a></div>
-                                </div>
-                                <picture>
-                                    <source type="image/webp" srcset="data:image/webp;base64, gUSP%2BBQHMALD4KVAAAAE" />
-                                    <source type="image/png" srcset="images/MostPopularCta-ee17b239a00bc569fd8ec69fbd3eb6ba.png" />
-                                    <img alt="most popular image" loading="lazy" />
-                                </picture>
-                            </div>
-                        </div>
+                        
+                        
                     </div>
                     <div class="main-module--footer--Uc4f4">
                         <div class="main-module--content--Yvq1Y">
                             <div class="main-module--copyright--TyMXw">© 2023 Platrio All rights reserved.</div>
                             <div class="main-module--nav--JSElV">
                                 <a href="https://donotpay.com/about">About</a><a href="https://donotpay.com/contact">Contact Us and Pricing Information</a>
-                                <a href="https://donotpay.com/learn/terms-of-service-and-privacy-policy/">Terms & Conditions</a><button>Sign Up</button>
+                                <a href="https://donotpay.com/learn/terms-of-service-and-privacy-policy/">Terms & Conditions</a><button>Consulta</button>
                             </div>
                             <div class="main-module--blocklinks--Hi60w">
                                 <a href="https://donotpay.com/learn/how-to-cancel/">Cancel Services</a><a href="https://donotpay.com/learn/free-trials/">Free Trials</a>

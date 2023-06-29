@@ -4,9 +4,9 @@
     <defs>
         <linearGradient x1="41.8770626%" y1="32.7744569%" x2="89.5609389%" y2="85.3251869%" id="linearGradient-1">
             <!-- <stop stop-color="#6F26FA" offset="0%"></stop> -->
-            <stop stop-color="#FA2626" offset="0%"></stop>
-            <stop stop-color="#DB43DB" offset="44.0271286%"></stop>
-            <stop stop-color="#FFCEB6" offset="100%"></stop>
+            <stop stop-color="#3600AF" offset="0%"></stop>
+            <stop stop-color="#68FDFF" offset="60"></stop>
+            <stop stop-color="#1E0876" offset="100%"></stop>
         </linearGradient>
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
