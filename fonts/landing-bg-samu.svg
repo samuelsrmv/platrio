@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="2538px" height="2793px" viewBox="0 0 2538 2793" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Mask</title>
+    <defs>
+        <linearGradient x1="41.8770626%" y1="32.7744569%" x2="89.5609389%" y2="85.3251869%" id="linearGradient-1">
+            <stop stop-color="#6F26FA" offset="0%"></stop>
+            <stop stop-color="#DB43DB" offset="44.0271286%"></stop>
+            <stop stop-color="#FFCEB6" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M367.952048,256.814271 C618.898344,281.475201 743.945731,409.347407 743.094209,640.430887 C741.816926,987.056108 386.149553,942.443724 384.584224,1391.47276 C383.018896,1840.5018 863.382112,1760.24288 863.382112,2122.0251 C863.382112,2363.21324 773.449366,2500.45656 593.583876,2533.75505 L1996.50437,2535.81427 L1996.50437,258.873487 L367.952048,256.814271 Z" id="Mask" fill="url(#linearGradient-1)" transform="translate(1182.228210, 1396.314271) rotate(40.000000) translate(-1182.228210, -1396.314271) "></path>
+    </g>
+</svg>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="2794px" height="2713px" viewBox="0 0 2794 2713" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>123</title>
+    <defs>
+        <linearGradient x1="41.8770626%" y1="32.7744569%" x2="89.5609389%" y2="85.3251869%" id="linearGradient-1">
+            <stop stop-color="#6F26FA" offset="0%"></stop>
+            <stop stop-color="#43A6DB" offset="44.1378934%"></stop>
+            <stop stop-color="#B6FAFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="mobile-bg" transform="translate(0.913940, 0.086060)" fill="url(#linearGradient-1)" fill-rule="nonzero">
+            <path d="M582.038109,216.72821 C832.984405,241.38914 958.031792,369.26135 957.18027,600.34483 C955.902987,946.97005 600.235614,902.35766 598.670285,1351.3867 C597.104957,1800.41574 1077.46817,1720.15682 1077.46817,2081.93904 C1077.46817,2323.12718 987.535427,2460.3705 807.669937,2493.66899 L2210.59043,2495.72821 L2210.59043,218.78743 L582.038109,216.72821 Z" id="Mask" transform="translate(1396.314270, 1356.228210) rotate(50.000000) translate(-1396.314270, -1356.228210) "></path>
+        </g>
+    </g>
+</svg>
